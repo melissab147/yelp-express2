@@ -1,0 +1,46 @@
+extends layout
+
+block content
+
+	//Display basic info
+	- var item = restaurant
+	h3= item.name
+	h5= item.stars + ' stars | ' + item.review_count + ' reviews'
+
+	//Display address, hours, and picture
+	div.row
+		div.five.columns= item.full_address
+			br
+			br
+			h5= "Hours"
+			for val, index in item.hours
+				div.row
+					div.one.column
+					div.three.columns(align='right')
+						b= index
+					div.five.columns= val.open + " - " + val.close
+		div.four.columns
+			img(src= 'images/' + item.image)
+	br
+	br
+
+	//Display additional info (tags)
+	div.row
+		div.seven.columns
+			h5= "More business info"
+			for val, index in item.attributes
+				div.row
+					div.five.columns(align='right')
+						b= index	
+					div.two.columns
+						if typeof(val)=="object"				
+							for val2, index2 in val
+								if val2==true
+									span.button=index2
+						else if val==true
+							= "Yes"
+						else if val==false
+							= "No"
+						else
+							span.button= val
+	br

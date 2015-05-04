@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	// display the detail of the first item
+	- var item = tip
+	- item.pic = 'http://www.ochrerestaurant.com.au/highres_images/ochre_outside.jpg?206ab1'
+	br
+	if (restaurant) 
+		h3= restaurant.name
+	else 
+		h3 Default Name
+	div.row
+		div.four.columns
+			img(src=item.pic)
+		div.eight.columns 
+			br
+			p= item.text
+			p= "By " + item.user_id + " on " + item.date
+			p= "Likes: " + item.likes

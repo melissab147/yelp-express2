@@ -1,0 +1,70 @@
+extends layout
+
+block content
+    // display the detail of the first item
+    - var item = doctor
+    //Doctor's name and stars
+    div.row
+      div.six.columns
+        h3=item.name
+        span.i.fa.fa-star.fa-lg
+        span.i.fa.fa-star.fa-lg
+        span.i.fa.fa-star.fa-lg
+        span.i.fa.fa-star-half.fa-lg
+      div.two.columns
+        h5=item.review_count + ' Reviews'
+      div.four.columns
+        img(src='design/Eric.jpg')
+   
+    
+    //Timing information
+    h3 Timings
+    h6 ____________________________________________________________________________
+    div.row
+      div.one.column 
+       h6 Status:
+      div.one.column
+       if item.open 
+         b="OPEN"
+       else
+         b="CLOSED"
+      div.ten.columns
+       if item.attributes["By Appointment Only"] 
+         b="By Appointment Only"
+       else
+         b="Drop-in!"
+   
+
+    //detailed timing information
+    div.row
+     div.two.columns
+      h5 Day 
+     div.two.columns 
+      h5 Open
+     div.two.columns
+      h5 Close
+    
+    if item.hours
+      each day,index in item.hours
+        div.row
+          div.two.columns
+            b= index
+          div.two.columns
+            h6=day.open + ' AM'
+          div.two.columns
+            h6=day.close + ' PM'
+    h6 ____________________________________________________________________________
+    //location
+    h3 Location
+    div.row
+        div.one.column 
+          b="Address: "
+        div.three.columns= item.full_address
+    div.row
+        div.one.column 
+          b="City: "
+        div.three.columns= item.city
+    div.row
+        div.one.column
+          b="State: "
+        div.three.columns= item.state

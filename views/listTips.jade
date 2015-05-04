@@ -1,0 +1,13 @@
+extends layout.jade
+
+block content
+    each item in tips
+        div.row
+            a(href='/view/user/' + item.user_id)
+                = item.user_id 
+            = ' says "'
+            a(href='/view/tip/' + item.business_id + '/' + item.user_id)
+                = item.text 
+            = '" about '
+            a(href='/view/restaurant/' + item.business_id) 
+                = item.business_id

@@ -1,0 +1,51 @@
+extends layout
+
+block content
+
+  h3 Search by Routes
+
+  ol
+    li
+        a(href='/search/restaurants/name/has/Pizza') Restaurants with names containing the word 'Pizza'
+    li
+        a(href='/search/restaurants/name/has/Bar') Restaurants with names containing the word 'Bar'                
+    li
+      a(href='/search/restaurants/good/for/dessert') Restaurants good for dessert
+    li
+        a(href='/search/restaurants/good/for/lunch') Restaurants good for lunch
+    li
+        a(href='/search/restaurants/ambience/is/casual') Restaurants with a casual ambience
+    li
+        a(href='/search/restaurants/ambience/is/romantic') Restaurants with a romantic ambience
+    li
+        a(href='/search/restaurants/stars/above/4') Restaurants with four starts and higher
+    li
+        a(href='/search/restaurants/stars/below/3') Restaurants with three starts and lower
+    li
+        a(href='/search/restaurants/category/is/Fast-Food') Restaurants in the Fast-Food category
+    li
+        a(href='/search/restaurants/category/is/Chinese') Restaurants in the Chinese category
+
+  h3 Search by Query Strings
+
+  ol
+    li
+        a(href='/search/restaurants/q?name=Pizza') /search/restaurants/q?name=Pizza 
+    li 
+        a(href='/search/restaurants/q?name=Bar') /search/restaurants/q?name=Bar
+    li
+        a(href='/search/restaurants/q?minStars=4') /search/restaurants/q?minStars=4
+    li 
+        a(href='/search/restaurants/q?minStars=2') /search/restaurants/q?minStars=2
+    li
+        a(href='/search/restaurants/q?minStars=4&name=Pizza') /search/restaurants/q?minStars=4&name=Pizza
+    li
+        a(href='/search/restaurants/q?minStars=2&name=Bar') /search/restaurants/q?minStars=2&name=Bar
+    li
+        a(href='/search/restaurants/q?minStars=4&name=Pizza&category=Fast+Food') /search/restaurants/q?minStars=4&name=Pizza&category=Fast+Food
+    li
+        a(href='/search/restaurants/q?minStars=4&category=Chinese') /search/restaurants/q?minStars=4&category=Fast+Food
+    li
+        a(href='/search/restaurants/q?minStars=2&ambience=casual') /search/restaurants/q?minStars=2&name=Bar&ambience=casual
+    li
+        a(href='/search/restaurants/q?minStars=2&ambience=romantic') /search/restaurants/q?minStars=2&ambience=romantic
