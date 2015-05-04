@@ -17,9 +17,6 @@ Makeup Hackathon - Yelp Express
     $ node app.js
 
 # View
-    Available at http://localhost:3000/list/restaurants
-
-The site is hosted publicly at 
-
-[https://frozen-tor-4197.herokuapp.com/](https://frozen-tor-4197.herokuapp.com/note/list)
+    Available locally at: [http://localhost:3000/list/restaurants](http://localhost:3000/list/restaurants)
+    Available publically at: [https://frozen-tor-4197.herokuapp.com/](https://frozen-tor-4197.herokuapp.com/note/list)
 
