@@ -1,0 +1,15 @@
+extends layout
+
+block content
+
+    h3 Restaurants Advanced Search
+    p Search by restaurant name or city.
+    form(action='/searchName', method='get')
+        h4 Name:
+        input(type='text', name='restname', value='', id='restname', placeholder='Ex: Mi Cocina')
+        input(type='submit', data-transition='fade', value='Submit')
+
+    form(action='/searchCity')
+        h4 City:
+        input(type='text', name='restcity', placeholder='Ex: Middleton')
+        input(type='submit', value='Submit')

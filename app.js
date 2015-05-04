@@ -76,6 +76,9 @@ app.get('/view/tip/:business_id/:user_id', function(req, res) {
 var plugin = require('./search')
 plugin(app)
 
+var plugin2 = require('./searchRestaurants')
+plugin2(app)
+
 var server = app.listen(process.env.PORT || 3000, function() {
 
     var host = server.address().address
