@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+  h3 Search by Query Strings
+
+  ol
+    li
+        a(href='/search/doctors/q?name=Eric') /search/doctors/q?name=Eric 
+    li 
+        a(href='/search/doctors/q?name=Austin') /search/doctors/q?name=Austin
+    li
+        a(href='/search/doctors/q?minStars=4') /search/doctors/q?minStars=4
+    li 
+        a(href='/search/doctors/q?minStars=2') /search/doctors/q?minStars=2
+    li
+        a(href='/search/doctors/q?minStars=3&name=Austin') /search/doctors/q?minStars=3&name=Austin
+    li
+        a(href='/search/doctors/q?minStars=2&name=Barnet') /search/doctors/q?minStars=2&name=Barnet
+    li
+        a(href='/search/doctors/q?minStars=4&category=Family+Practice') /search/doctors/q?minStars=4&category=Family+Practice
+    li
+        a(href='/search/doctors/q?minStars=4&category=Cardiologists') /search/doctors/q?minStars=4&category=Cardiologists
+    li
+        a(href='/search/doctors/q?minStars=2&city=Phoenix') /search/doctors/q?minStars=2&city=Phoenix

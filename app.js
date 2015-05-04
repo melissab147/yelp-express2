@@ -32,6 +32,12 @@ app.get('/list/doctors', function(req, res) {
     })
 })
 
+app.get('/list/doctorsSearch', function(req, res) {
+    res.render('SearchlistDoctors.jade', {
+        doctors: doctors
+    })
+})
+
 app.get('/list/tips', function(req, res) {
     res.render('listTips.jade', {
         tips: tips
@@ -78,6 +84,9 @@ plugin(app)
 
 var plugin2 = require('./searchRestaurants')
 plugin2(app)
+
+var plugin3 = require('./searchDoctors')
+plugin3(app)
 
 var server = app.listen(process.env.PORT || 3000, function() {
 
